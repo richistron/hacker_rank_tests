@@ -1,0 +1,16 @@
+{
+  "env": {
+    "es6": true,
+    "node",
+  },
+  "rules": {
+    "semi": 2
+  },
+  "globals": {
+    "expect": true,
+    "it": true,
+    "describe": true,
+    "require": true,
+    "module": true
+  }
+}

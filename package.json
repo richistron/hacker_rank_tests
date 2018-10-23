@@ -1,0 +1,14 @@
+{
+  "name": "algoritmos",
+  "version": "1.0.0",
+  "description": "hacker rank stuff",
+  "scripts": {
+    "test": "jest src/**/*.test.js --watch"
+  },
+  "author": "Ricardo Rivas <richistron@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0"
+  }
+}
