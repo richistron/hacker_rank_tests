@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "hacker rank stuff",
   "scripts": {
-    "test": "jest src/**/*.test.js --watch"
+    "test": "CI=true jest src/*.test.js"
   },
   "author": "Ricardo Rivas <richistron@gmail.com>",
   "license": "MIT",
