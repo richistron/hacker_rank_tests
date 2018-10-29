@@ -20,14 +20,16 @@ end
 describe 'RepeatedString' do
   it 'case 1' do
     repeatedList = RepeatedString.new'aba', 10
-    str = 'abaabaabaa'
-    expect(str.size).to be(10)
-    expect(repeatedList.get_string).to eq(str)
     expect(repeatedList.count).to be(7)
   end
 
   it 'case 2' do
-    repeatedList = RepeatedString.new'c', 1000000000000
+    repeatedList = RepeatedString.new'a', 1000000000000
     expect(repeatedList.count).to be(1000000000000)
   end
+
+  # gfcaaaecbg
+  # 547602
+  #
+  # res 164280
 end

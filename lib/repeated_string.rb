@@ -58,22 +58,13 @@ class LinkedList
 end
 
 class RepeatedString
-  def initialize(str = '', n = 0, list = LinkedList)
-    @list = LinkedList.new str.split('')
+  def initialize(str = '', n = 0)
     @size = n
+    @str = str
   end
 
   def count
-    get_string.scan('a').size
-  end
-
-  def get_string
-    @str = ''
-    current_node = @list.head
-    @size.times do
-      @str += current_node.data
-      current_node = current_node.next || @list.head
-    end
-    @str
+    res = @str.scan('a').size.to_f * @size.to_f / @str.size.to_f
+    res.round
   end
 end
