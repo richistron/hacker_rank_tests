@@ -12,11 +12,7 @@ class RepeatedString
       matches * times
     else
       @str = ''
-      @i = 0
-      diff.times do
-        @str += @string.split('')[@i]
-        @i += 1
-      end
+      diff.times {|key| @str += @string.split('')[key]}
       matches * times + @str.scan('a').size
     end
   end
