@@ -1,21 +1,23 @@
 class RepeatedString
-  def initialize(str = '', n = 0)
-    @size = n
-    @arr = str.split ''
+  def initialize(string = '', string_size = 0)
+    @string = string
+    @string_size = string_size
   end
 
   def count
-    @res = ''
-    @key = 0
-    @size.times do
-      if @arr[@key].nil?
-        @key = 0
-        @res += @arr[@key]
-      else
-        @res += @arr[@key]
-        @key += 1
+    matches = @string.scan('a').size
+    times = @string_size / @string.size
+    diff = @string_size - ( @string.size * times )
+    if diff === 0
+      matches * times
+    else
+      @str = ''
+      @i = 0
+      diff.times do
+        @str += @string.split('')[@i]
+        @i += 1
       end
+      matches * times + @str.scan('a').size
     end
-    @res.scan('a').size
   end
 end
